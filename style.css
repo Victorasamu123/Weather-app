@@ -65,3 +65,51 @@ button{
     font-family: sans-serif;
     font-weight: 900;
 }
+section{
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    /* font-size:100px; */
+    color: rgb(255,255,255);
+    font-weight: bolder;
+    height: 250px;
+    width: 450px;
+    background-color:rgba(0,0,0,0.5);
+    /* opacity: 0.2; */
+    border-radius: 10px;
+    padding-left:100px ;
+    padding-top: 90px;
+    font-family: sans-serif;
+}
+#presure{
+    color: rgb(255,255,255);
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+#humidity{
+    color: rgb(255,255,255);
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+#lon{
+    color: rgb(255,255,255);
+    font-size: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+}
+#lat{
+    color: rgb(255,255,255);
+    font-size: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+}
