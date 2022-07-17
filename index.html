@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="phone.css" media="(max-width: 600px)">
 </head>
-<body>
+<body onload="getData()">
     <input type="text" id="city" placeholder="Enter location">
     <button onclick="getUrl()">get city</button>
-    <script src="script.js"></script>
     <div id="temp"></div></div>
     <section>
     <div id="presure"></div>
@@ -22,5 +21,6 @@
     </section>
     <div id="con"></div>
     <div id="town"></div> 
+    <script src="script.js"></script>
 </body>
 </html>

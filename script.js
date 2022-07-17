@@ -1,13 +1,24 @@
+let long = document.getElementById("lon");
+let latt = document.getElementById("lat");
+async function getData(){
+            navigator.geolocation.getCurrentPosition(
+                (position)=>{
+                    console.log(position.coords.latitude)
+                    latt.innerHTML = JSON.stringify("Latitude: " +position.coords.latitude)
+                    long.innerHTML = JSON.stringify("Longitude: "+position.coords.longitude);
+                    
+                }
+            )
+}
+
 async function getUrl(){
-    let cityName = document.getElementById("city").value;
-    let tempCity = document.getElementById("temp");
-    let presCity =  document.getElementById("presure");
-    let humCity =  document.getElementById("humidity");
-    let long = document.getElementById("lon");
-    let latt = document.getElementById("lat");
-    let county = document.getElementById("con");
-    let townName = document.getElementById("town")
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=09756d60b2011a99fb389f6e43e766cc`;
+let cityName = document.getElementById("city").value;
+let tempCity = document.getElementById("temp");
+let presCity =  document.getElementById("presure");
+let humCity =  document.getElementById("humidity");
+let county = document.getElementById("con");
+let townName = document.getElementById("town")
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=80b833690e8542ee89d8f5b9bd05aa04`;
     const response = await fetch(url);
     const getResponse = await response.json();
     tempCity.innerHTML = JSON.stringify(`${Math.round(getResponse.main.temp-273)} °c `);
@@ -19,3 +30,6 @@ async function getUrl(){
     townName.innerHTML = JSON.stringify(getResponse.name);
     console.log(getResponse);
 }
+// const response = await fetch(url);
+    // 
+    
